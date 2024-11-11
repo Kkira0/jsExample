@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="name">Ievadiet vārdu: </label>
+    <input type="text" name="name" id="name" />
+    <button type="submit" id="submit">Submit</button>
+
+    <script>
+      console.log("Kira");
+
+      function printName() {
+        console.log("Kira");
+      }
+      printName();
+
+      const inputt = document.getElementById("name");
+      const buttonn = document.getElementById("submit");
+
+      buttonn.addEventListener("click", function () {
+        console.log(inputt.value);
+      });
+    </script>
+  </body>
+</html>
