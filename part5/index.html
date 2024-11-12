@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="text" id="text" />
+    <input type="submit" value="button" id="button" />
+    <p id="paragrahs"></p>
+
+    <script>
+      const Masina = {
+        Marka: "Bmw",
+        Modelis: "316",
+        Gads: 1998,
+        Krasa: "Sarkans",
+        Cena: "5 Dolar",
+      };
+
+      function mekletAtributu() {
+        const atributs = document.getElementById("text").value;
+
+        const rezultats = Masina[atributs];
+
+        if (rezultats) {
+          document.getElementById("paragrahs").textContent =
+            "Atribūta vērtība: " + rezultats;
+          console.log("STRADA");
+        } else {
+          document.getElementById("paragrahs").textContent =
+            "Atribūts netika atrasts.";
+        }
+      }
+
+      document
+        .getElementById("button")
+        .addEventListener("click", mekletAtributu);
+    </script>
+  </body>
+</html>
